@@ -1,0 +1,17 @@
+
+C_Table:  table for customer
+
+create table C_Table(
+TableNo INTEGER PRIMARY KEY AUTOINCREMENT,
+Size INT(10),
+IsReserved verchar(10)
+);
+
+
+Reservation table:
+
+create table Reservation(
+ReservationNo INTEGER PRIMARY KEY AUTOINCREMENT,
+Time timestamp,
+Date date
+);
