@@ -1,0 +1,5 @@
+1. ERD Diagram
+2. Database Design
+3. Select UI
+4. App Development
+
