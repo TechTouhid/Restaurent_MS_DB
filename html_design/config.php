@@ -4,7 +4,7 @@
  */
 
 $databaseHost = 'localhost';
-$databaseName = 'RestauratDB';
+$databaseName = 'RestaurantDB';
 $databaseUsername = 'root';
 $databasePassword = '';
 
