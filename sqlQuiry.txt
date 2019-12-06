@@ -2,9 +2,9 @@
 C_Table:  table for customer
 
 create table C_Table(
-TableNo INTEGER PRIMARY KEY AUTOINCREMENT,
-Size INT(10),
-IsReserved verchar(10)
+TableNo INTEGER PRIMARY KEY AUTO_INCREMENT,
+Size varchar(255),
+IsReserved varchar(255)
 );
 
 
@@ -19,62 +19,61 @@ Date date
 Stuff table:
 
 create table Stuff(
-StuffNo INTEGER PRIMARY KEY AUTOINCREMENT,
-FirstName varchar(20),
-LastName varchar(20),
+StuffNo INTEGER PRIMARY KEY AUTO_INCREMENT,
+FirstName varchar(255),
+LastName varchar(255),
 Phone INT(20),
-City varchar(20),
+City varchar(255),
 Gender INT(1),
 Salary INT(25),
-JobTitle varchar(30)
+JobTitle varchar(255)
 );
 
 Customer: 
 
 create table Customer(
-CustomerId INTEGER PRIMARY KEY AUTOINCREMENT,
-Name varchar(20),
+CustomerId INTEGER PRIMARY KEY AUTO_INCREMENT,
+Name varchar(255),
 Phone INT(20),
-Email varchar(30)
+Email varchar(255)
 );
 
 Meal:
 
 create table Meal(
 MealId INTEGER PRIMARY KEY AUTOINCREMENT,
-Name varchar(20),
-Desciption varchar(30),
+Name varchar(255),
+Desciption varchar(255),
 Price INT(20),
-Size INT(20)
+Size varchar(255)
 );
 
-
-CREATE TABLE "Order" (
-OrderId INTEGER PRIMARY KEY AUTOINCREMENT,
+create TABLE C_Order (
+OrderId INTEGER PRIMARY KEY AUTO_INCREMENT,
 Time timestamp,
 Date date
 );
 
 
-CREATE TABLE "Bill" (
-BillNo INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE Bill (
+BillNo INTEGER PRIMARY KEY AUTO_INCREMENT,
 Time timestamp,
 Date date,
 BillAmount INT(20)
 );
 
 
-CREATE TABLE "Cash" (
-ReceiptNo INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE Cash (
+ReceiptNo INTEGER PRIMARY KEY AUTO_INCREMENT,
 Time timestamp,
 Date date,
-PaymentType varcher(255),
+PaymentType varchar(255),
 TotalAmount INT(20)
 );
 
-CREATE TABLE "CreditCard" (
-CC_No INTEGER PRIMARY KEY AUTOINCREMENT,
-FirstName varcher(255),
-LastName varcher(255),
+CREATE TABLE CreditCard (
+CC_No INTEGER PRIMARY KEY AUTO_INCREMENT,
+FirstName varchar(255),
+LastName varchar(255),
 ExpiryDate date
 );
