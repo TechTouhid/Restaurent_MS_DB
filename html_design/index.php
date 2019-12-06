@@ -61,32 +61,48 @@ include_once("config.php");
 			<div class="collapse navbar-collapse" id="navigation">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="index.html">Home</a>
+						<a class="nav-link" href="index.php">Home</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="view.php">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="menu.html">Recipes</a></li>
-					<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false">Reservation</a>
+							aria-expanded="false">stuff</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="reservation.html">Reservation</a></li>
-							<li><a class="dropdown-item" href="cart.html">Cart</a></li>
-							<li><a class="dropdown-item" href="shipping.html">Shipping</a></li>
-							<li><a class="dropdown-item" href="payment.html">Payment</a></li>
-							<li><a class="dropdown-item" href="confirmation.html">Confirmation</a></li>
+							<li><a class="dropdown-item" href="signin.html">all stuffs</a></li>
+							<li><a class="dropdown-item" href="edit_stuff.html">edit</a></li>
 						</ul>
 					</li>
+					<li class="nav-item"><a class="nav-link" href="gallery.html">Order</a></li>
+				</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false">Blog</a>
+							aria-expanded="false"> Reservation </a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="blog.html">Blog </a></li>
-							<li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-						</ul>
-					</li>
+							<li><a class="dropdown-item" href="reservation.html">reserved</a></li>
+							<li><a class="dropdown-item" href="edit_reservation.html">edit</a></li>
+						</li>
+					</ul>
 
-					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Paymant</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="payment.html">Cash</a></li>
+							<li><a class="dropdown-item" href="creditcard.html">CreditCard</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> + </a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="admin.html">admin</a></li>
+							<li><a class="dropdown-item" href="signin.html">signin</a></li>
+							<li><a class="dropdown-item" href="signup.html">Signup</a></li>
+						</ul>
+					</li>
+					
+
 				</ul>
 			</div>
 		</div>
