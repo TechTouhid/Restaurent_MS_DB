@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 06, 2019 at 01:46 AM
+-- Generation Time: Dec 06, 2019 at 04:47 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `RestauretDB`
+-- Database: `RestaurantDB`
 --
 
 -- --------------------------------------------------------
@@ -135,12 +135,20 @@ CREATE TABLE `Stuff` (
   `StuffNo` int(11) NOT NULL,
   `FirstName` varchar(255) DEFAULT NULL,
   `LastName` varchar(255) DEFAULT NULL,
-  `Phone` int(20) DEFAULT NULL,
+  `Phone` varchar(255) DEFAULT NULL,
   `City` varchar(255) DEFAULT NULL,
   `Gender` int(1) DEFAULT NULL,
   `Salary` int(25) DEFAULT NULL,
   `JobTitle` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Stuff`
+--
+
+INSERT INTO `Stuff` (`StuffNo`, `FirstName`, `LastName`, `Phone`, `City`, `Gender`, `Salary`, `JobTitle`) VALUES
+(1, 'Touhidur', 'Rahman', '18377226513', 'Laibin', 1, 5000, 'Manager'),
+(2, 'Azad', 'Hossain', '15977208627', 'Laibin', 1, 7000, 'CEO');
 
 --
 -- Indexes for dumped tables
@@ -256,7 +264,7 @@ ALTER TABLE `Reservation`
 -- AUTO_INCREMENT for table `Stuff`
 --
 ALTER TABLE `Stuff`
-  MODIFY `StuffNo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `StuffNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
