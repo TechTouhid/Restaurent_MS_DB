@@ -1,3 +1,24 @@
+<?php 
+
+include_once("config.php");
+
+if(isset($_GET['submit']) && !empty($_GET['submit']))
+{
+    $f_name = $_GET['f_name'];
+    $l_name = $_GET['l_name'];
+    $city = $_GET['city'];
+    $gender = $_GET['gender'];
+    $phone = $_GET['phone'];
+    $salary = $_GET['salary'];
+    $jobtitle = $_GET['jobtitle'];
+
+    $sql = "INSERT INTO Stuff (FirstName, LastName, Phone, City, Gender, Salary, JobTitle)
+    VALUES ('$f_name', '$l_name', '$phone', '$city', '$gender',  '$salary', '$jobtitle' )";
+
+    mysqli_query($mysqli, $sql);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +50,10 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body style="background-color: #999999;">
-	
+<body style="background-color: #999999;" >
+<form action="" method="get">
+		
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
@@ -43,28 +66,33 @@
 
 					<div class="wrap-input100 validate-input" data-validate="First Name is required">
 						<span class="label-input100">First Name</span>
-						<input class="input100" type="text" name="name" placeholder="First Name...">
+						<input class="input100" type="text" name="f_name" placeholder="First Name...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">last Name</span>
-						<input class="input100" type="text" name="name" placeholder="last Name...">
+						<input class="input100" type="text" name="l_name" placeholder="last Name...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid city is required: ex@abc.xyz">
 						<span class="label-input100">city</span>
-						<input class="input100" type="text" name="email" placeholder="city...">
+						<input class="input100" type="text" name="city" placeholder="city...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid gender is required: ex@abc.xyz">
-						<span class="label-input100">Gender</span>
-						<select> 
+						<span class="label-input100" >Gender</span>
+						<select name='gender'> 
 							 <option>select the option</option>
+<<<<<<< HEAD:html_design/edit_stuff.html
            						 <option value="gender">male</option> 
            						  <option value="gender">female</option> 
+=======
+           						 <option value="1" >male</option> 
+           						  <option value="0" >female</option> 
+>>>>>>> e405aa49a80b5dff5ac5cff1bdbdd20b70a23bbe:html_design/edit_stuff.php
 						</select>
 						
 						<span class="focus-input100"></span>
@@ -73,19 +101,19 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">phone</span>
-						<input class="input100" type="text" name="email" placeholder="phone...">
+						<input class="input100" type="text" name="phone" placeholder="phone...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Salary</span>
-						<input class="input100" type="text" name="email" placeholder="Salary...">
+						<input class="input100" type="text" name="salary" placeholder="Salary...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">job title</span>
-						<input class="input100" type="text" name="email" placeholder="title...">
+						<input class="input100" type="text" name="jobtitle" placeholder="title...">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -93,9 +121,8 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Done
-							</button>
+							<input class="login100-form-btn" type="submit" name="submit">
+							<!-- <button class="login100-form-btn" type="submit", name="submit">Done</button> -->
 						</div>
 
 						<a href="edit_stuff.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
@@ -107,6 +134,7 @@
 			</div>
 		</div>
 	</div>
+</form>
 	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
