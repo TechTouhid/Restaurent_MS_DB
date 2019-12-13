@@ -104,7 +104,14 @@ include_once("config.php");
 						</ul>
 					</li>
 
-					<li class="nav-item"><a class="nav-link" href="gallery.html">Order</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Order</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="Ordered_list.php">Ordered list</a></li>
+							<li><a class="dropdown-item" href="#">add</a></li>
+						</ul>
+					</li>
 
 				
 					<li class="nav-item dropdown">
