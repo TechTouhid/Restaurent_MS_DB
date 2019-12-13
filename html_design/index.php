@@ -99,7 +99,8 @@ include_once("config.php");
 							aria-expanded="false">menu</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="meal.php">list</a></li>
-							<li><a class="dropdown-item" href="#">add</a></li>
+							<li><a class="dropdown-item" 
+							href="add_meal.html">add</a></li>
 						</ul>
 					</li>
 
