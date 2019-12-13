@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 06, 2019 at 04:47 AM
+-- Generation Time: Dec 13, 2019 at 03:19 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `RestaurantDB`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Admin`
+--
+
+CREATE TABLE `Admin` (
+  `AdminId` int(11) NOT NULL,
+  `userame` varchar(255) DEFAULT NULL,
+  `Password` int(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Admin`
+--
+
+INSERT INTO `Admin` (`AdminId`, `userame`, `Password`) VALUES
+(1, 'AZAD', 123456);
 
 -- --------------------------------------------------------
 
@@ -155,6 +174,12 @@ INSERT INTO `Stuff` (`StuffNo`, `FirstName`, `LastName`, `Phone`, `City`, `Gende
 --
 
 --
+-- Indexes for table `Admin`
+--
+ALTER TABLE `Admin`
+  ADD PRIMARY KEY (`AdminId`);
+
+--
 -- Indexes for table `Bill`
 --
 ALTER TABLE `Bill`
@@ -211,6 +236,12 @@ ALTER TABLE `Stuff`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `Admin`
+--
+ALTER TABLE `Admin`
+  MODIFY `AdminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `Bill`
