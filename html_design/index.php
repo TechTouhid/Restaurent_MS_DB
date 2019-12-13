@@ -68,13 +68,9 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">stuffs_info</a>
 						<ul class="dropdown-menu">
-<<<<<<< HEAD
-							<li><a class="dropdown-item" href="#">all stuffs</a></li>
-							<li><a class="dropdown-item" href="edit_stuff.html">edit</a></li>
-=======
+
 							<li><a class="dropdown-item" href="view_stuff_list.php">all stuffs</a></li>
 							<li><a class="dropdown-item" href="edit_stuff.php">Add New</a></li>
->>>>>>> c9d3425437e406ddd889b5e5f25be1127e3a06fb
 						</ul>
 					</li>
 
