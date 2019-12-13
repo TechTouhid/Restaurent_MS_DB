@@ -68,7 +68,7 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">stuffs_info</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="signin.html">all stuffs</a></li>
+							<li><a class="dropdown-item" href="#">all stuffs</a></li>
 							<li><a class="dropdown-item" href="edit_stuff.html">edit</a></li>
 						</ul>
 					</li>
@@ -78,7 +78,7 @@ include_once("config.php");
 							aria-expanded="false">customer</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="payment.html">list</a></li>
-							<li><a class="dropdown-item" href="creditcard.html">add</a></li>
+							<li><a class="dropdown-item" href="customer.html">add</a></li>
 						</ul>
 					</li>
 
@@ -97,8 +97,8 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">menu</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="payment.html">list</a></li>
-							<li><a class="dropdown-item" href="creditcard.html">add</a></li>
+							<li><a class="dropdown-item" href="meal.php">list</a></li>
+							<li><a class="dropdown-item" href="#">add</a></li>
 						</ul>
 					</li>
 
@@ -109,7 +109,7 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">Paymant</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="payment.html">Cash</a></li>
+							<li><a class="dropdown-item" href="receipt-form.html">Cash</a></li>
 							<li><a class="dropdown-item" href="creditcard.html">CreditCard</a></li>
 						</ul>
 					</li>
