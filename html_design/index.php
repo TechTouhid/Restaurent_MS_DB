@@ -63,17 +63,26 @@ include_once("config.php");
 					<li class="nav-item active">
 						<a class="nav-link" href="index.php">Home</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="view.php">About</a></li>
+
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false">stuff</a>
+							aria-expanded="false">stuffs_info</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="signin.html">all stuffs</a></li>
 							<li><a class="dropdown-item" href="edit_stuff.html">edit</a></li>
 						</ul>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="gallery.html">Order</a></li>
-				</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">customer</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="payment.html">list</a></li>
+							<li><a class="dropdown-item" href="creditcard.html">add</a></li>
+						</ul>
+					</li>
+
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> Reservation </a>
@@ -82,8 +91,20 @@ include_once("config.php");
 							<li><a class="dropdown-item" href="edit_reservation.html">edit</a></li>
 						</li>
 					</ul>
+					</li>
 
-					<li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">menu</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="payment.html">list</a></li>
+							<li><a class="dropdown-item" href="creditcard.html">add</a></li>
+						</ul>
+					</li>
+
+					<li class="nav-item"><a class="nav-link" href="gallery.html">Order</a></li>
+
+				
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">Paymant</a>
@@ -390,15 +411,6 @@ include_once("config.php");
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-12 text-center mt-5">
-				<a href="menu.html" class="btn btn-black ">View full menu</a>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- DISHES  End -->
-
 <!--App start -->
 <section class="section download">
 	<div class="container">
@@ -461,31 +473,6 @@ include_once("config.php");
 	</div>
 </section>
 <!-- App  End -->
-
-
-  <section style="padding: 100px 0;">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 mx-auto">
-				<div class="text-center p-5 shadow rounded">
-					<h2 class="mb-3">You have downloaded free version of CafeDine.</h2>
-					<h4 class="mb-3">To get full access of this page please purchase the premium version</h4>
-					<h4>Why Premium?</h4>
-					<ul class="list-unstyled mb-4">
-						<li>Full Template Pack</li>
-						<li>Priority Support</li>
-						<li>Documentation Included</li>
-						<li>Monthly Update</li>
-						<li>Lifetime Download</li>
-						<li>Personal and commercial Use</li>
-						<li>One time payment</li>
-					</ul>
-					<a href="https://themefisher.com/products/veggie-one-page-responsive-html5-restaurant-website-templates/" target="_blank" class="btn btn-main">Buy Premium Version</a>			
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 
 
 <!-- Slider main container -->
