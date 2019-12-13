@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 13, 2019 at 03:19 AM
+-- Generation Time: Dec 13, 2019 at 11:37 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -21,25 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `RestaurantDB`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Admin`
---
-
-CREATE TABLE `Admin` (
-  `AdminId` int(11) NOT NULL,
-  `userame` varchar(255) DEFAULT NULL,
-  `Password` int(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `Admin`
---
-
-INSERT INTO `Admin` (`AdminId`, `userame`, `Password`) VALUES
-(1, 'AZAD', 123456);
 
 -- --------------------------------------------------------
 
@@ -121,6 +102,31 @@ CREATE TABLE `C_Table` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Employee`
+--
+
+CREATE TABLE `Employee` (
+  `EmployeeNo` int(11) NOT NULL,
+  `FirstName` varchar(255) DEFAULT NULL,
+  `LastName` varchar(255) DEFAULT NULL,
+  `Phone` varchar(255) DEFAULT NULL,
+  `City` varchar(255) DEFAULT NULL,
+  `Gender` int(1) DEFAULT NULL,
+  `Salary` int(25) DEFAULT NULL,
+  `JobTitle` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `Employee`
+--
+
+INSERT INTO `Employee` (`EmployeeNo`, `FirstName`, `LastName`, `Phone`, `City`, `Gender`, `Salary`, `JobTitle`) VALUES
+(1, 'Touhidur', 'Rahman', '18377226513', 'Natore', 1, 500, 'CEO'),
+(2, 'Azad', 'Hossain', '11111111', 'Dhaka', 1, 500, 'Manager');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Meal`
 --
 
@@ -144,40 +150,9 @@ CREATE TABLE `Reservation` (
   `Date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `Stuff`
---
-
-CREATE TABLE `Stuff` (
-  `StuffNo` int(11) NOT NULL,
-  `FirstName` varchar(255) DEFAULT NULL,
-  `LastName` varchar(255) DEFAULT NULL,
-  `Phone` varchar(255) DEFAULT NULL,
-  `City` varchar(255) DEFAULT NULL,
-  `Gender` int(1) DEFAULT NULL,
-  `Salary` int(25) DEFAULT NULL,
-  `JobTitle` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `Stuff`
---
-
-INSERT INTO `Stuff` (`StuffNo`, `FirstName`, `LastName`, `Phone`, `City`, `Gender`, `Salary`, `JobTitle`) VALUES
-(1, 'Touhidur', 'Rahman', '18377226513', 'Laibin', 1, 5000, 'Manager'),
-(2, 'Azad', 'Hossain', '15977208627', 'Laibin', 1, 7000, 'CEO');
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `Admin`
---
-ALTER TABLE `Admin`
-  ADD PRIMARY KEY (`AdminId`);
 
 --
 -- Indexes for table `Bill`
@@ -216,6 +191,12 @@ ALTER TABLE `C_Table`
   ADD PRIMARY KEY (`TableNo`);
 
 --
+-- Indexes for table `Employee`
+--
+ALTER TABLE `Employee`
+  ADD PRIMARY KEY (`EmployeeNo`);
+
+--
 -- Indexes for table `Meal`
 --
 ALTER TABLE `Meal`
@@ -228,20 +209,8 @@ ALTER TABLE `Reservation`
   ADD PRIMARY KEY (`ReservationNo`);
 
 --
--- Indexes for table `Stuff`
---
-ALTER TABLE `Stuff`
-  ADD PRIMARY KEY (`StuffNo`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `Admin`
---
-ALTER TABLE `Admin`
-  MODIFY `AdminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `Bill`
@@ -280,6 +249,12 @@ ALTER TABLE `C_Table`
   MODIFY `TableNo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `Employee`
+--
+ALTER TABLE `Employee`
+  MODIFY `EmployeeNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `Meal`
 --
 ALTER TABLE `Meal`
@@ -290,12 +265,6 @@ ALTER TABLE `Meal`
 --
 ALTER TABLE `Reservation`
   MODIFY `ReservationNo` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `Stuff`
---
-ALTER TABLE `Stuff`
-  MODIFY `StuffNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
