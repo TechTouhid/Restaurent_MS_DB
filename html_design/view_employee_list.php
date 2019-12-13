@@ -84,7 +84,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Employee ORDER BY EmployeeNo");
 
 				  echo "<td>".$user_data['Salary']."</td>";
 				  echo "<td>".$user_data['JobTitle']."</td>";
-				  echo "<td><a href='update_employee.php?id=$user_data[EmployeeNo]'>Edit</a> | <a href='delete.php?id=$user_data[EmployeeNo]'>Delete</a></td></tr>";
+				  echo "<td><a href='update_employee.php?id=$user_data[EmployeeNo]'>Edit</a> | <a href='delete_employee.php?id=$user_data[EmployeeNo]'>Delete</a></td></tr>";
 				  ?>
 				</tr>
 			  </tbody>
