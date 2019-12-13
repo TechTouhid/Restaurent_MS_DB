@@ -66,11 +66,11 @@ include_once("config.php");
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false">stuffs_info</a>
+							aria-expanded="false">Employee's_info</a>
 						<ul class="dropdown-menu">
 
-							<li><a class="dropdown-item" href="view_stuff_list.php">all stuffs</a></li>
-							<li><a class="dropdown-item" href="edit_stuff.php">Add New</a></li>
+							<li><a class="dropdown-item" href="view_employee_list.php">All employees</a></li>
+							<li><a class="dropdown-item" href="add_employee.php">Add New</a></li>
 						</ul>
 					</li>
 
