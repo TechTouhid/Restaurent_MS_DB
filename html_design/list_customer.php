@@ -69,7 +69,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Customer ORDER BY CustomerId");
 				  echo "<td>".$user_data['Phone']."</td>";
 				  echo "<td>".$user_data['Email']."</td>";
 
-				  echo "<td><a href='update_customer.php?id=$user_data[CustomerId]'>Edit</a> | <a href='delete.php?id=$user_data[CustomerId]'>Delete</a></td></tr>";
+				  echo "<td><a href='update_customer.php?id=$user_data[CustomerId]'>Edit</a> | <a href='delete_customer.php?id=$user_data[CustomerId]'>Delete</a></td></tr>";
 				  ?>
 				</tr>
 			  </tbody>
