@@ -5,13 +5,13 @@ include_once("config.php");
 if(isset($_GET['submit']) && !empty($_GET['submit']))
 {
     $Name = $_GET['Name'];
-    $Description= $_GET['Description'];
+    $Description= $_GET['Desciption'];
     $Price = $_GET['Price'];
     $Size = $_GET['Size'];
     $id = $_GET['id'];
  
 
-   $sql = "UPDATE Meal SET Name = '$Name', Description = '$Description', Price = '$Price', Size = '$Size' WHERE MealId='$id'";
+   $sql = "UPDATE Meal SET Name = '$Name', Description = '$Desciption', Price = '$Price', Size = '$Size' WHERE MealId='$id'";
 
      // $sql = "update student set std_id ='$id', name='$name', contact='$contact' WHERE id='$sid'";
 
@@ -29,7 +29,7 @@ $id = $_GET['id'];
 $result = mysqli_query($mysqli, "SELECT * FROM Meal WHERE MealId='$id'");
 while($user_data = mysqli_fetch_assoc($result)){
 		$Name = $user_data['Name'];
-		$Description = $user_data['Description'];
+		$Description = $user_data['Desciption'];
 		$Price = $user_data['Price'];
 		$Size = $user_data['Size'];
 
