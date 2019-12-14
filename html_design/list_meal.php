@@ -50,9 +50,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 		<tr>
 		  <th scope="col">#</th>
 		  <th scope="col">Name</th>
-		  <th scope="col">Desciption</th>
+		  <th scope="col">Description</th>
 		  <th scope="col">Price</th>
 		  <th scope="col">size</th>
+		  <th scope="col">Update/Delete</th>
 
 		</tr>
 	  </thead>
@@ -66,10 +67,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 				  <th scope="row"><?php  echo $i; ?></th>
 				  <?php
 				  echo "<td>".$user_data['Name']."</td>";
-				  echo "<td>".$user_data['Description']."</td>";
+				  echo "<td>".$user_data['Desciption']."</td>";
 				  echo "<td>".$user_data['Price']."</td>";
 				  echo "<td>".$user_data['Size']."</td>";
-				  echo "<td><a href='update_meal.php?id=$user_data[MealId]'>Edit</a> | <a href='delete_employee.php?id=$user_data[MealId]'>Delete</a></td></tr>";
+				  echo "<td><a href='update_meal.php?id=$user_data[MealId]'>Edit</a> | <a href='list_meal.php?id=$user_data[MealId]'>Delete</a></td></tr>";
 				  ?>
 				</tr>
 			  </tbody>
