@@ -4,7 +4,7 @@
 include_once("config.php");
 
 // Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
+$result = mysqli_query($mysqli, "SELECT * FROM Reservation ORDER BY ReservationNo");
 ?>
 
 
@@ -49,10 +49,9 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 	  <thead>
 		<tr>
 		  <th scope="col">#</th>
-		  <th scope="col">Name</th>
-		  <th scope="col">Desciption</th>
-		  <th scope="col">Price</th>
-		  <th scope="col">size</th>
+		  <th scope="col">Time</th>
+		  <th scope="col">Date</th>
+		  <!-- <th scope="col">Email</th> -->
 
 		</tr>
 	  </thead>
@@ -65,12 +64,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 		
 				  <th scope="row"><?php  echo $i; ?></th>
 				  <?php
-				  echo "<td>".$user_data['Name']."</td>";
-				  echo "<td>".$user_data['Desciption']."</td>";
-				  echo "<td>".$user_data['Price']."</td>";
-				  echo "<td>".$user_data['Size']."</td>";
+				  echo "<td>".$user_data['Time']."</td>";
+				  echo "<td>".$user_data['Date']."</td>";
 
-				 // echo "<td> <a href='edit_meal.php?id=$user_data[mealId]'>Edit</a> | <a href='delete.php?id=$user_data[mealId]'>Delete</a></td></tr>";
+				  echo "<td><a href='update_reservation.php?id=$user_data[ReservationNo]'>Edit</a> | <a href='delete.php?id=$user_data[ReservationNo]'>Delete</a></td></tr>";
 				  ?>
 				</tr>
 			  </tbody>

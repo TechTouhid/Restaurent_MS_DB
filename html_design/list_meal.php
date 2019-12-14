@@ -4,7 +4,7 @@
 include_once("config.php");
 
 // Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM Customer ORDER BY CustomerId");
+$result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 ?>
 
 
@@ -50,8 +50,9 @@ $result = mysqli_query($mysqli, "SELECT * FROM Customer ORDER BY CustomerId");
 		<tr>
 		  <th scope="col">#</th>
 		  <th scope="col">Name</th>
-		  <th scope="col">Phone</th>
-		  <th scope="col">Email</th>
+		  <th scope="col">Desciption</th>
+		  <th scope="col">Price</th>
+		  <th scope="col">size</th>
 
 		</tr>
 	  </thead>
@@ -65,10 +66,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM Customer ORDER BY CustomerId");
 				  <th scope="row"><?php  echo $i; ?></th>
 				  <?php
 				  echo "<td>".$user_data['Name']."</td>";
-				  echo "<td>".$user_data['Phone']."</td>";
-				  echo "<td>".$user_data['Email']."</td>";
-
-				  // echo "<td><a href='update_stuff.php?id=$user_data[StuffNo]'>Edit</a> | <a href='delete.php?id=$user_data[StuffNo]'>Delete</a></td></tr>";
+				  echo "<td>".$user_data['Desciption']."</td>";
+				  echo "<td>".$user_data['Price']."</td>";
+				  echo "<td>".$user_data['Size']."</td>";
+				  echo "<td><a href='update_meal.php?id=$user_data[MealId]'>Edit</a> | <a href='delete_employee.php?id=$user_data[MealId]'>Delete</a></td></tr>";
 				  ?>
 				</tr>
 			  </tbody>

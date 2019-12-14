@@ -1,7 +1,29 @@
+<?php 
+
+include_once("config.php");
+
+if(isset($_GET['submit']) && !empty($_GET['submit']))
+{
+    $Name = $_GET['Name'];
+    $Desciption= $_GET['Desciption'];
+    $Price = $_GET['Price'];
+    $Size = $_GET['Size'];
+
+
+    $sql = "INSERT INTO Customer (Name, Desciption, Price, Size) VALUES ( '$Name', '$Desciption', '$Price' '$Size' )";
+
+    
+  	mysqli_query($mysqli, $sql); 
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V13</title>
+	<title>Restaruant</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -29,8 +51,10 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body style="background-color: #999999;">
-	
+<body style="background-color: #999999;" >
+<form action="" method="get">
+		
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
@@ -38,47 +62,51 @@
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-59">
-						Sign Up
+						Information
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
+						<input class="input100" type="text" name="Name" placeholder="Name...">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">Description</span>
-						<input class="input100" type="Description" name="text" placeholder="Description...">
-						<span class="focus-input100"></span>
-					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="required">
-						<span class="label-input100">Price</span>
-						<input class="input100" type="price" name="price" placeholder="price...">
+					<div class="wrap-input100 validate-input" data-validate = "required">
+						<span class="label-input100">Desciption</span>
+						<input class="input100" type="Desciption" name="Desciption" placeholder="Desciption..." >
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "required">
-						<span class="label-input100">size</span>
-						<input class="input100" type="text" name="name">
+						<span class="label-input100">Price</span>
+						<input class="input100" type="Price" name="Price" placeholder="Price">
 						<span class="focus-input100"></span>
 					</div>
 
+					<div class="wrap-input100 validate-input" data-validate = "required">
+						<span class="label-input100">Size</span>
+						<input class="input100" type="text" name="Size" placeholder="Size">
+						<span class="focus-input100"></span>
+					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Add
-							</button>
+							<input class="login100-form-btn" type="submit" name="submit">
+							<!-- <button class="login100-form-btn" type="submit", name="submit">Done</button> -->
 						</div>
 
+						<a class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+							<input type="reset">
+							<i class="fa fa-long-arrow-right m-l-5"></i>
+						</a>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
+</form>
 	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>

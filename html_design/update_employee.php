@@ -116,9 +116,9 @@ while($user_data = mysqli_fetch_assoc($result)){
 					</div>
 
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<div class="wrap-input100 validate-input" data-validate = "required">
 						<span class="label-input100">phone</span>
-						<input class="input100" type="text" name="phone" placeholder="phone..." value=<?php echo $phone;?>
+						<input class="input100" type="phone" name="phone" placeholder="phone..." value=<?php echo $phone;?>
 						<span class="focus-input100"></span>
 					</div>
 
@@ -143,8 +143,8 @@ while($user_data = mysqli_fetch_assoc($result)){
 							<!-- <button class="login100-form-btn" type="submit", name="submit">Done</button> -->
 						</div>
 
-						<a href="edit_Employee.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-							reset
+						<a class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+							<input type="reset">
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>
 					</div>

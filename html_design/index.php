@@ -78,8 +78,8 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">customer</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="customer_list.php">list</a></li>
-							<li><a class="dropdown-item" href="customer.html">add</a></li>
+							<li><a class="dropdown-item" href="list_customer.php">list</a></li>
+							<li><a class="dropdown-item" href="add_customer.php">add</a></li>
 						</ul>
 					</li>
 
@@ -88,8 +88,8 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> Reservation </a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="reservation_list.php">reserved</a></li>
-							<li><a class="dropdown-item" href="edit_reservation.html">edit</a></li>
+							<li><a class="dropdown-item" href="list_reservation.php">reserved</a></li>
+							<li><a class="dropdown-item" href="add_reservation.php">edit</a></li>
 						</li>
 					</ul>
 					</li>
@@ -98,9 +98,9 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">menu</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="meal_list.php">list</a></li>
+							<li><a class="dropdown-item" href="list_meal.php">list</a></li>
 							<li><a class="dropdown-item" 
-							href="add_meal.html">add</a></li>
+							href="add_meal.php">add</a></li>
 						</ul>
 					</li>
 

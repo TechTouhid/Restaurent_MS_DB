@@ -4,21 +4,20 @@ include_once("config.php");
 
 if(isset($_GET['submit']) && !empty($_GET['submit']))
 {
-    $f_name = $_GET['f_name'];
-    $l_name = $_GET['l_name'];
-    $city = $_GET['city'];
-    $gender = $_GET['gender'];
-    $phone = $_GET['phone'];
-    $salary = $_GET['salary'];
-    $jobtitle = $_GET['jobtitle'];
+    $Name = $_GET['Name'];
+    $Phone = $_GET['Phone'];
+    $Email = $_GET['Email'];
 
-    $sql = "INSERT INTO Employee (FirstName, LastName, Phone, City, Gender, Salary, JobTitle)
-    VALUES ('$f_name', '$l_name', '$phone', '$city', '$gender',  '$salary', '$jobtitle' )";
 
-    mysqli_query($mysqli, $sql);
-    header("Location:add_employee.php");
+    $sql = "INSERT INTO Customer (Name, Phone, Email) VALUES ( '$Name', '$Phone', '$Email')";
+
+    
+  	mysqli_query($mysqli, $sql); 
+
 }
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,54 +64,24 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 						Information
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate="First Name is required">
-						<span class="label-input100">First Name</span>
-						<input class="input100" type="text" name="f_name" placeholder="First Name...">
-						<span class="focus-input100"></span>
-					</div>
-
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
-						<span class="label-input100">last Name</span>
-						<input class="input100" type="text" name="l_name" placeholder="last Name...">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid city is required: ex@abc.xyz">
-						<span class="label-input100">city</span>
-						<input class="input100" type="text" name="city" placeholder="city...">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid gender is required: ex@abc.xyz">
-						<span class="label-input100" >Gender</span>
-						<select name='gender'> 
-							 <option>select the option</option>
-           						 <option value="1" >male</option> 
-           						  <option value="0" >female</option> 
-						</select>
-						
+						<span class="label-input100">Name</span>
+						<input class="input100" type="text" name="Name" placeholder="Name...">
 						<span class="focus-input100"></span>
 					</div>
 
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">phone</span>
-						<input class="input100" type="text" name="phone" placeholder="phone...">
+					<div class="wrap-input100 validate-input" data-validate = "required: ex@abc.xyz">
+						<span class="label-input100">Phone</span>
+						<input class="input100" type="phone" name="Phone" placeholder="Phone..." >
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">Salary</span>
-						<input class="input100" type="text" name="salary" placeholder="Salary...">
+					<div class="wrap-input100 validate-input" data-validate = "required: ex@abc.xyz">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="Email" name="Email" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">job title</span>
-						<input class="input100" type="text" name="jobtitle" placeholder="title...">
-						<span class="focus-input100"></span>
-					</div>
-
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
@@ -121,7 +90,7 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 							<!-- <button class="login100-form-btn" type="submit", name="submit">Done</button> -->
 						</div>
 
-						<a href="edit_Employee.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+						<a class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
 							<input type="reset">
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>
