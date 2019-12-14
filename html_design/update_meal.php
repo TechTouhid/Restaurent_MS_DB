@@ -5,13 +5,13 @@ include_once("config.php");
 if(isset($_GET['submit']) && !empty($_GET['submit']))
 {
     $Name = $_GET['Name'];
-    $Description= $_GET['Desciption'];
+    $Desciption= $_GET['Desciption'];
     $Price = $_GET['Price'];
     $Size = $_GET['Size'];
     $id = $_GET['id'];
  
 
-   $sql = "UPDATE Meal SET Name = '$Name', Description = '$Desciption', Price = '$Price', Size = '$Size' WHERE MealId='$id'";
+   $sql = "UPDATE Meal SET Name = '$Name', Desciption = '$Desciption', Price = '$Price', Size = '$Size' WHERE MealId='$id'";
 
      // $sql = "update student set std_id ='$id', name='$name', contact='$contact' WHERE id='$sid'";
 
@@ -29,7 +29,7 @@ $id = $_GET['id'];
 $result = mysqli_query($mysqli, "SELECT * FROM Meal WHERE MealId='$id'");
 while($user_data = mysqli_fetch_assoc($result)){
 		$Name = $user_data['Name'];
-		$Description = $user_data['Desciption'];
+		$Desciption = $user_data['Desciption'];
 		$Price = $user_data['Price'];
 		$Size = $user_data['Size'];
 
@@ -90,7 +90,7 @@ while($user_data = mysqli_fetch_assoc($result)){
 
 					<div class="wrap-input100 validate-input" data-validate="required">
 						<span class="label-input100">Description</span>
-						<input class="input100" type="text" name="Description" placeholder="Description..." value=<?php echo $Description;?>>
+						<input class="input100" type="text" name="Description" placeholder="Description..." value=<?php echo $Desciption;?>>
 						<span class="focus-input100"></span>
 					</div>
 
