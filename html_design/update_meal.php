@@ -5,13 +5,13 @@ include_once("config.php");
 if(isset($_GET['submit']) && !empty($_GET['submit']))
 {
     $Name = $_GET['Name'];
-    $Desciption= $_GET['Desciption'];
+    $Description= $_GET['Description'];
     $Price = $_GET['Price'];
     $Size = $_GET['Size'];
     $id = $_GET['id'];
  
 
-   $sql = "UPDATE Meal SET Name = '$Name', Desciption = '$Desciption', Price = '$Price', Size = '$Size' WHERE MealId='$id'";
+   $sql = "UPDATE Meal SET Name = '$Name', Description = '$Description', Price = '$Price', Size = '$Size' WHERE MealId='$id'";
 
      // $sql = "update student set std_id ='$id', name='$name', contact='$contact' WHERE id='$sid'";
 
@@ -29,7 +29,7 @@ $id = $_GET['id'];
 $result = mysqli_query($mysqli, "SELECT * FROM Meal WHERE MealId='$id'");
 while($user_data = mysqli_fetch_assoc($result)){
 		$Name = $user_data['Name'];
-		$Desciption = $user_data['Desciption'];
+		$Description = $user_data['Description'];
 		$Price = $user_data['Price'];
 		$Size = $user_data['Size'];
 
@@ -89,21 +89,21 @@ while($user_data = mysqli_fetch_assoc($result)){
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="required">
-						<span class="label-input100">Desciption</span>
-						<input class="input100" type="text" name="Desciption" placeholder="Desciption..." value=<?php echo $Desciption;?>
+						<span class="label-input100">Description</span>
+						<input class="input100" type="text" name="Description" placeholder="Description..." value=<?php echo $Description;?>>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "required">
 						<span class="label-input100">Price</span>
-						<input class="input100" type="text" name="Price" placeholder="Price..." value=<?php echo $Price;?>
+						<input class="input100" type="text" name="Price" placeholder="Price..." value=<?php echo $Price;?>>
 						<span class="focus-input100"></span>
 					</div>
 
 
 					<div class="wrap-input100 validate-input" data-validate = "required">
 						<span class="label-input100">Size</span>
-						<input class="input100" type="text" name="size" placeholder="size..." value=<?php echo $Size;?>
+						<input class="input100" type="text" name="Size" placeholder="size..." value=<?php echo $Size;?>>
 						<span class="focus-input100"></span>
 					</div>
 

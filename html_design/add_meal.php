@@ -5,12 +5,13 @@ include_once("config.php");
 if(isset($_GET['submit']) && !empty($_GET['submit']))
 {
     $Name = $_GET['Name'];
-    $Desciption= $_GET['Desciption'];
+    $Description= $_GET['Description'];
     $Price = $_GET['Price'];
     $Size = $_GET['Size'];
 
 
-    $sql = "INSERT INTO Customer (Name, Desciption, Price, Size) VALUES ( '$Name', '$Desciption', '$Price' '$Size' )";
+    $sql = "INSERT INTO Meal (Name, Description, Price, Size) VALUES ( '$Name', '$Description', '$Price', '$Size' )";
+
 
     
   	mysqli_query($mysqli, $sql); 
@@ -73,8 +74,8 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 
 
 					<div class="wrap-input100 validate-input" data-validate = "required">
-						<span class="label-input100">Desciption</span>
-						<input class="input100" type="Desciption" name="Desciption" placeholder="Desciption..." >
+						<span class="label-input100">Description</span>
+						<input class="input100" type="Description" name="Description" placeholder="Description..." >
 						<span class="focus-input100"></span>
 					</div>
 
