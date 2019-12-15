@@ -67,7 +67,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 				  <th scope="row"><?php  echo $i; ?></th>
 				  <?php
 				  echo "<td>".$user_data['Name']."</td>";
-				  echo "<td>".$user_data['Desciption']."</td>";
+				  echo "<td>".$user_data['Description']."</td>";
 				  echo "<td>".$user_data['Price']."</td>";
 				  echo "<td>".$user_data['Size']."</td>";
 				  echo "<td><a href='update_meal.php?id=$user_data[MealId]'>Edit</a> | <a href='delete_meal.php?id=$user_data[MealId]'>Delete</a></td></tr>";
