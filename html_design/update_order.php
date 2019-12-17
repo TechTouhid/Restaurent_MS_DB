@@ -1,20 +1,45 @@
-<?php
+<?php 
 
-// Create database connection using config file
 include_once("config.php");
 
-// Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM C_Order ORDER BY OrderId");
+if(isset($_GET['submit']) && !empty($_GET['submit']))
+{
+    $Time = $_GET['Time'];
+    $Date = $_GET['Date'];
+    $id = $_GET['id'];
+ 
+
+   $sql = "UPDATE C_Order SET Time = '$Time', Date = '$Date' WHERE OrderId='$id'";
+
+    
+  	mysqli_query($mysqli, $sql);
+  	header("Location:update_order.php?id=$id");
+}
+?>
+
+<?php
+// Display selected user data based on id
+// Getting id from url
+
+$id = $_GET['id'];
+
+$result = mysqli_query($mysqli, "SELECT * FROM C_Order WHERE OrderId='$id'");
+while($user_data = mysqli_fetch_assoc($result)){
+	
+	$Time = $user_data['Time'];
+    $Date = $user_data['Date'];
+
+	}
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V13</title>
+	<title>Restaruant</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->  
+<!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -26,67 +51,63 @@ $result = mysqli_query($mysqli, "SELECT * FROM C_Order ORDER BY OrderId");
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->  
+<!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->  
+<!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
-<style type="text/css">
-
 </head>
-<body style="background-color: #999999;">
-
-
-	<table class="table">
-	  <thead>
-		<tr>
-		  <th scope="col">#</th>
-		  <th scope="col">Time</th>
-		  <th scope="col">Date</th>
-		  <th scope="col">Update/Delete</th>
-
-		</tr>
-	  </thead>
-
-	    <?php 
-	    $i = 1; 
-			while($user_data = mysqli_fetch_array($result)) { ?>
-		  	<tbody>
-				<tr>
+<body style="background-color: #999999;" >
+<form action="update_order.php" method="get">
 		
-				  <th scope="row"><?php  echo $i; ?></th>
-				  <?php
-				  echo "<td>".$user_data['Time']."</td>";
-				  echo "<td>".$user_data['Date']."</td>";
-				  
-				 echo "<td><a href='update_order.php?id=$user_data[OrderId]'>Edit</a> | <a href='delete_Order.php?id=$user_data[OrderId]'>Delete</a></td></tr>";
-				  ?>
-				</tr>
-			  </tbody>
-		   <?php 
-		   $i++;
-			} 
-	   		?>
-	</table>
 
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
 
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-59">
+						Information
+					</span>
 
+					<div class="wrap-input100 validate-input" data-validate="required">
+						<span class="label-input100">Time</span>
+						<input class="input100" type="Time" name="Time" placeholder="Time..." value = <?php echo $Time;?>
+						<span class="focus-input100"></span>
+					</div>
 
+					<div class="wrap-input100 validate-input" data-validate = "required">
+						<span class="label-input100">Date</span>
+						<input class="input100" type="Date" name="Date" placeholder="Date..." value=<?php echo $Date;?>
+						<span class="focus-input100"></span>
+					</div>
 
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+							<input class="login100-form-btn" type="submit" name="submit">
+							
+						</div>
 
-
-
-
-
-	
+						<a class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+							<input type="reset">
+							<i class="fa fa-long-arrow-right m-l-5"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</form>
 	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>

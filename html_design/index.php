@@ -109,7 +109,7 @@ include_once("config.php");
 							aria-expanded="false">Order</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="Ordered_list.php">Ordered list</a></li>
-							<li><a class="dropdown-item" href="#">add</a></li>
+							<li><a class="dropdown-item" href="add_order.php">add</a></li>
 						</ul>
 					</li>
 
