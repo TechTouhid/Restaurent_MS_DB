@@ -50,6 +50,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Customer ORDER BY CustomerId");
 		<tr>
 		  <th scope="col"><a href='index.php'>Home</a></th>
 		  <th scope="col">Name</th>
+		  <th scope="col">Customer Id</th>
 		  <th scope="col">Phone</th>
 		  <th scope="col">Email</th>
 		  <th scope="col">Update/Delete</th>
@@ -66,6 +67,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Customer ORDER BY CustomerId");
 				  <th scope="row"><?php  echo $i; ?></th>
 				  <?php
 				  echo "<td>".$user_data['Name']."</td>";
+				  echo "<td>".$user_data['CustomerId']."</td>";
 				  echo "<td>".$user_data['Phone']."</td>";
 				  echo "<td>".$user_data['Email']."</td>";
 

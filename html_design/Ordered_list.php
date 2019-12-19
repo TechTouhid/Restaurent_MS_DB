@@ -51,6 +51,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM C_Order ORDER BY OrderId");
 		  <th scope="col">#</th>
 		  <th scope="col">Time</th>
 		  <th scope="col">Date</th>
+          <th scope="col">Customer Id</th>
 		  <th scope="col">Update/Delete</th>
 
 		</tr>
@@ -66,6 +67,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM C_Order ORDER BY OrderId");
 				  <?php
 				  echo "<td>".$user_data['Time']."</td>";
 				  echo "<td>".$user_data['Date']."</td>";
+				  echo "<td>".$user_data['CustomerId']."</td>";
 				  
 				 echo "<td><a href='update_order.php?id=$user_data[OrderId]'>Edit</a> | <a href='delete_Order.php?id=$user_data[OrderId]'>Delete</a></td></tr>";
 				  ?>

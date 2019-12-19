@@ -6,15 +6,28 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 {
     $Time = $_GET['Time'];
     $Date = $_GET['Date'];
-    $id = $_GET['id'];
- 
+    $CustomerId = $_GET['CustomerId'];
 
-    $sql = "INSERT INTO C_Order (Time, Date )
-    VALUES ('$Time', '$Date')";
+
+
+    $sql = "INSERT INTO C_Order (CustomerId, Time, Date )
+    VALUES ('$CustomerId', '$Time', '$Date')";
 
     mysqli_query($mysqli, $sql);
-    header("Location:add_order.php");
+//        if ($mysqli->query($sql) === TRUE) {
+//        // Successful popup message, redirected back to view contacts
+//        echo "<script type='text/javascript'>alert('Successfully Record Added!'); window.location.href = 'add_order.php';</script>";
+//    } else {
+//        // Unsuccessful popup message, redirected back to view contacts
+//        echo "<script type='text/javascript'>alert('Unsuccessful - ERROR!'); window.location.href = 'add_order.php';</script>";
+//    }
+
 }
+
+//SELECT Customer.CustomerId, Customer.Name, Reservation.Time, Reservation.Date, C_Order.Time, C_Order.Date FROM Customer JOIN Reservation on Customer.CustomerId = Reservation.CustomerId JOIN C_Order on Customer.CustomerId = C_Order.CustomerId;
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -74,12 +87,18 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 						<span class="focus-input100"></span>
 					</div>
 
+					<div class="wrap-input100 validate-input" data-validate="required">
+						<span class="label-input100">Customer Id</span>
+						<input class="input100" type="text" name="CustomerId">
+						<span class="focus-input100"></span>
+					</div>
+
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<input class="login100-form-btn" type="submit" name="submit">
-							<!-- <button class="login100-form-btn" type="submit", name="submit">Done</button> -->
+
 						</div>
 
 						<a class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">

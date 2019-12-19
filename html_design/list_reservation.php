@@ -51,6 +51,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Reservation ORDER BY ReservationN
           <th scope="col"><a href='index.php'>Home</a></th>
 		  <th scope="col">Time</th>
 		  <th scope="col">Date</th>
+		  <th scope="col">Customer Id</th>
 		  <th scope="col">Update/Delete</th>
 
 		</tr>
@@ -66,6 +67,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Reservation ORDER BY ReservationN
 				  <?php
 				  echo "<td>".$user_data['Time']."</td>";
 				  echo "<td>".$user_data['Date']."</td>";
+				  echo "<td>".$user_data['CustomerId']."</td>";
 
 				  echo "<td><a href='update_reservation.php?id=$user_data[ReservationNo]'>Edit</a> | <a href='delete_reservation.php?id=$user_data[ReservationNo]'>Delete</a></td></tr>";
 				  ?>
