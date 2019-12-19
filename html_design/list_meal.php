@@ -48,7 +48,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 	<table class="table">
 	  <thead>
 		<tr>
-		  <th scope="col">#</th>
+          <th scope="col"><a href='index.php'>Home</a></th>
 		  <th scope="col">Name</th>
 		  <th scope="col">Description</th>
 		  <th scope="col">Price</th>

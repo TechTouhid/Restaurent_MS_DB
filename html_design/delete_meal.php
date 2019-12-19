@@ -6,5 +6,13 @@ include_once("config.php");
 
     $sql = "DELETE FROM Meal WHERE MealId ='$id'";
     mysqli_query($mysqli, $sql);
-    header("Location:list_meal.php");
+
+    if ($mysqli->query($sql) === TRUE) {
+        // Successful popup message, redirected back to view contacts
+        echo "<script type='text/javascript'>alert('Successfully Deleted!'); window.location.href = 'list_meal.php';</script>";
+    } else {
+        // Unsuccessful popup message, redirected back to view contacts
+        echo "<script type='text/javascript'>alert('Unsuccessful - ERROR!'); window.location.href = 'list_meal.php';</script>";
+    }
+
 ?>

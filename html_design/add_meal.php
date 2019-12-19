@@ -9,12 +9,21 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
     $Price = $_GET['Price'];
     $Size = $_GET['Size'];
 
-
     $sql = "INSERT INTO Meal (Name, Description, Price, Size) VALUES ( '$Name', '$Description', '$Price', '$Size' )";
 
+    mysqli_query($mysqli, $sql);
 
-    
-  	mysqli_query($mysqli, $sql); 
+//    if ($mysqli->query($sql) === TRUE) {
+//        // Successful popup message, redirected back to view contacts
+//        echo "<script type='text/javascript'>alert('Successfully Record Added!'); window.location.href = 'add_meal.php';</script>";
+//    } else {
+//        // Unsuccessful popup message, redirected back to view contacts
+//        echo "<script type='text/javascript'>alert('Unsuccessful - ERROR!'); window.location.href = 'add_meal.php';</script>";
+//    }
+
+    $mysqli->close();
+
+
 
 }
 
