@@ -15,7 +15,16 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 
     
   	mysqli_query($mysqli, $sql);
-  	header("Location:update_reservation.php?id=$id");
+
+
+    if ($mysqli->query($sql) === TRUE) {
+        // Successful popup message, redirected back to view contacts
+        echo "<script type='text/javascript'>alert('Successfully Updated!'); window.location.href = 'list_reservation.php';</script>";
+    } else {
+        // Unsuccessful popup message, redirected back to view contacts
+        echo "<script type='text/javascript'>alert('Unsuccessful - ERROR!'); window.location.href = 'list_reservation.php';</script>";
+    }
+
 }
 ?>
 

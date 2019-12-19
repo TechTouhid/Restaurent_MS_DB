@@ -48,7 +48,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Reservation ORDER BY ReservationN
 	<table class="table">
 	  <thead>
 		<tr>
-		  <th scope="col">#</th>
+          <th scope="col"><a href='index.php'>Home</a></th>
 		  <th scope="col">Time</th>
 		  <th scope="col">Date</th>
 		  <th scope="col">Update/Delete</th>
