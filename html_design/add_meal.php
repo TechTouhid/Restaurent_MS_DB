@@ -8,8 +8,9 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
     $Description= $_GET['Description'];
     $Price = $_GET['Price'];
     $Size = $_GET['Size'];
+    $CustomerId = $_GET['CustomerId'];
 
-    $sql = "INSERT INTO Meal (Name, Description, Price, Size) VALUES ( '$Name', '$Description', '$Price', '$Size' )";
+    $sql = "INSERT INTO Meal (Name, Description, Price, Size, CustomerId) VALUES ( '$Name', '$Description', '$Price', '$Size', '$CustomerId' )";
 
     mysqli_query($mysqli, $sql);
 
@@ -97,6 +98,12 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 					<div class="wrap-input100 validate-input" data-validate = "required">
 						<span class="label-input100">Size</span>
 						<input class="input100" type="text" name="Size" placeholder="Size">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "required">
+						<span class="label-input100">Customer Id</span>
+						<input class="input100" type="text" name="CustomerId" placeholder="CustomerId">
 						<span class="focus-input100"></span>
 					</div>
 

@@ -110,6 +110,7 @@ include_once("config.php");
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="Ordered_list.php">Ordered list</a></li>
 							<li><a class="dropdown-item" href="add_order.php">add</a></li>
+							<li><a class="dropdown-item" href="Customer_info.php">Customer Info</a></li>
 						</ul>
 					</li>
 

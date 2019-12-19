@@ -9,11 +9,10 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
     $Price = $_GET['Price'];
     $Size = $_GET['Size'];
     $id = $_GET['id'];
- 
+    $CustomerId = $_GET['CustomerId'];
 
-   $sql = "UPDATE Meal SET Name = '$Name', Description = '$Description', Price = '$Price', Size = '$Size' WHERE MealId='$id'";
 
-     // $sql = "update student set std_id ='$id', name='$name', contact='$contact' WHERE id='$sid'";
+   $sql = "UPDATE Meal SET Name = '$Name', Description = '$Description', Price = '$Price', Size = '$Size' WHERE MealId='$id',CustomerId = '$CustomerId'";
 
     
   	mysqli_query($mysqli, $sql);
@@ -40,6 +39,7 @@ while($user_data = mysqli_fetch_assoc($result)){
 		$Description = $user_data['Description'];
 		$Price = $user_data['Price'];
 		$Size = $user_data['Size'];
+		$CustomerId = $user_data['CustomerId'];
 
 	}
 ?>
@@ -112,6 +112,12 @@ while($user_data = mysqli_fetch_assoc($result)){
 					<div class="wrap-input100 validate-input" data-validate = "required">
 						<span class="label-input100">Size</span>
 						<input class="input100" type="text" name="Size" placeholder="size..." value=<?php echo $Size;?>>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "required">
+						<span class="label-input100">CustomerId</span>
+						<input class="input100" type="text" name="CustomerId" placeholder="CustomerId..." value=<?php echo $CustomerId;?>>
 						<span class="focus-input100"></span>
 					</div>
 

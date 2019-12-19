@@ -53,6 +53,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 		  <th scope="col">Description</th>
 		  <th scope="col">Price</th>
 		  <th scope="col">size</th>
+		  <th scope="col">$Customer Id</th>
 		  <th scope="col">Update/Delete</th>
 
 		</tr>
@@ -70,6 +71,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Meal ORDER BY MealId");
 				  echo "<td>".$user_data['Description']."</td>";
 				  echo "<td>".$user_data['Price']."</td>";
 				  echo "<td>".$user_data['Size']."</td>";
+				  echo "<td>".$user_data['CustomerId']."</td>";
 				  echo "<td><a href='update_meal.php?id=$user_data[MealId]'>Edit</a> | <a href='delete_meal.php?id=$user_data[MealId]'>Delete</a></td></tr>";
 				  ?>
 				</tr>
