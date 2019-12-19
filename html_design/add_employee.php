@@ -16,7 +16,16 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
     VALUES ('$f_name', '$l_name', '$phone', '$city', '$gender',  '$salary', '$jobtitle' )";
 
     mysqli_query($mysqli, $sql);
-    header("Location:add_employee.php");
+
+    if ($mysqli->query($sql) === TRUE) {
+        // Successful popup message, redirected back to view contacts
+    	echo "<script type='text/javascript'>alert('Successfully Record Added!'); window.location.href = 'add_employee.php';</script>";
+    } else {
+        // Unsuccessful popup message, redirected back to view contacts
+    	echo "<script type='text/javascript'>alert('Unsuccessful - ERROR!'); window.location.href = 'add_employee.php';</script>";
+    }
+
+    $mysqli->close();
 }
 ?>
 
@@ -62,7 +71,7 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-59">
-						Information
+						Employee Info
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="First Name is required">
@@ -118,10 +127,9 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<input class="login100-form-btn" type="submit" name="submit">
-							<!-- <button class="login100-form-btn" type="submit", name="submit">Done</button> -->
 						</div>
 
-						<a href="edit_Employee.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+						<a class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
 							<input type="reset">
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>

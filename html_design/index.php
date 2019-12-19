@@ -88,8 +88,8 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> Reservation </a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="list_reservation.php">reserved</a></li>
-							<li><a class="dropdown-item" href="add_reservation.php">edit</a></li>
+							<li><a class="dropdown-item" href="list_reservation.php">Reservation List</a></li>
+							<li><a class="dropdown-item" href="add_reservation.php">Reserv Table</a></li>
 						</li>
 					</ul>
 					</li>

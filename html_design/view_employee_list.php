@@ -48,7 +48,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Employee ORDER BY EmployeeNo");
 	<table class="table">
 	  <thead>
 		<tr>
-		  <th scope="col">#</th>
+          <th scope="col"><a href='index.php'>Home</a></th>
 		  <th scope="col">FirstName</th>
 		  <th scope="col">LastName</th>
 		  <th scope="col">Phone</th>
