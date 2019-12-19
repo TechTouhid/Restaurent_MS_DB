@@ -12,11 +12,15 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 
    $sql = "UPDATE Customer SET Name = '$Name', Phone = '$Phone', Email = '$Email' WHERE CustomerId='$id'";
 
-     // $sql = "update student set std_id ='$id', name='$name', contact='$contact' WHERE id='$sid'";
-
-    
   	mysqli_query($mysqli, $sql);
-  	header("Location:update_customer.php?id=$id");
+
+    if ($mysqli->query($sql) === TRUE) {
+        // Successful popup message, redirected back to view contacts
+        echo "<script type='text/javascript'>alert('Successfully Updated!'); window.location.href = 'list_customer.php';</script>";
+    } else {
+        // Unsuccessful popup message, redirected back to view contacts
+        echo "<script type='text/javascript'>alert('Unsuccessful - ERROR!'); window.location.href = 'list_customer.php';</script>";
+    }
 }
 ?>
 

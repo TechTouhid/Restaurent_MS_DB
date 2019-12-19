@@ -14,7 +14,22 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
     
   	mysqli_query($mysqli, $sql); 
 
+  	if ($mysqli->query($sql) === TRUE) {
+  	    // Successful popup message, redirected back to view contacts
+  		echo "<script type='text/javascript'>alert('Successfully Record Added!'); window.location.href = 'add_customer.php';</script>";
+  	} else {
+  	    // Unsuccessful popup message, redirected back to view contacts
+  		echo "<script type='text/javascript'>alert('Unsuccessful - ERROR!'); window.location.href = 'add_customer.php';</script>";
+  	}
+
+  	$mysqli->close();
+
 }
+
+
+
+
+
 
 ?>
 
@@ -62,6 +77,7 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-59">
 						Information
+
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
@@ -90,7 +106,7 @@ if(isset($_GET['submit']) && !empty($_GET['submit']))
 							<!-- <button class="login100-form-btn" type="submit", name="submit">Done</button> -->
 						</div>
 
-						<a class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+						<a href="add_customer.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
 							<input type="reset">
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>

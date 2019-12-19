@@ -48,7 +48,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM Customer ORDER BY CustomerId");
 	<table class="table">
 	  <thead>
 		<tr>
-		  <th scope="col">#</th>
+		  <th scope="col"><a href='index.php'>Home</a></th>
 		  <th scope="col">Name</th>
 		  <th scope="col">Phone</th>
 		  <th scope="col">Email</th>
