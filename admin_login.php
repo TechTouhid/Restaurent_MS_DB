@@ -14,7 +14,7 @@ if($_REQUEST['submit']!="")
         $row = mysqli_fetch_array($response);
         $_SESSION['username'] = $row['admin_email'];
         $_SESSION['password'] = $row['admin_password'];
-        header("location:dashboard.php");
+        header("location:html_design/index.php");
     }
     else
     {

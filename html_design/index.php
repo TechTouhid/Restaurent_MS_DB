@@ -114,21 +114,13 @@ include_once("config.php");
 						</ul>
 					</li>
 
-				
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false">Paymant</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="receipt-form.html">Cash</a></li>
-							<li><a class="dropdown-item" href="creditcard.html">CreditCard</a></li>
-						</ul>
-					</li>
+
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> + </a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="admin.html">admin</a></li>
-							<li><a class="dropdown-item" href="signin.html">signin</a></li>
+							<li><a class="dropdown-item" href="/intelij/admin">admin</a></li>
+							<li><a class="dropdown-item" href="/intelij/admin">signin</a></li>
 							<li><a class="dropdown-item" href="signup.html">Signup</a></li>
 						</ul>
 					</li>
